@@ -1,0 +1,94 @@
+<%- include('./partials/header') -%>
+<style>
+.carousel-item {
+height: 35vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+</style>
+ 
+    <body>
+
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image: url('https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg')">
+                <div class="carousel-caption">
+                  <h3>Work with US</h3><br><br><br>
+                  <p>Gain Experience and knowledge while working with us</p>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+                <div class="carousel-caption">
+                  <h3>Flexibility</h3><br><br><br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem voluptate maiores est quidem magni nulla la</p>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('https://source.unsplash.com/lHGeqh3XhRY/1920x1080')">
+                <div class="carousel-caption">
+                  <h3>Enhance and Expand</h3><br><br><br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas magnam modi corrupti dolores ad hic ipsam dolorum deleniti doloribus harum. Mollitia, expedita sequi obcaecati illum voluptatum culpa molestias commodi enim.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <hr>
+          <br>
+        
+          <h2 class="mx-auto" style="width: 500px;">
+            DAILY BLOGS
+            <small class="text-muted">you will love to read</small>
+          </h2>
+          <br>
+    <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class="card">
+              <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg" alt="Bologna">
+              <div class="card-img-overlay">
+                <a href="#" class="btn btn-light btn-sm">Cooking</a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Pasta with Prosciutto</h4>
+                <small class="text-muted cat">
+                  <i class="far fa-clock text-info"></i> 30 minutes
+                  <i class="fas fa-users text-info"></i> 4 portions
+                </small>
+                <p class="card-text">I love quick, simple pasta dishes, and this is one of my favorite.</p>
+                <a href="#" class="btn btn-info">Read Recipe</a>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+                <div class="views">Oct 20, 12:45PM
+                </div>
+                <div class="stats">
+                     <i class="far fa-eye"></i> 1347
+                  <i class="far fa-comment"></i> 12
+                </div>
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<hr>
+<br>
+<%- include('./partials/footer') -%>
