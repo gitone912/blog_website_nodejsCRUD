@@ -2,7 +2,7 @@ import Blog from "../models/blogData.js"
 
 class BlogController {
     static renderHome = (req, res) => {
-        res.render("index")
+        res.render("index",)
     }
 
     static createBlog = (req , res) => {
