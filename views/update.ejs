@@ -2,11 +2,11 @@
     <hr>
     <br>
     <h2 class="mx-auto" style="width: 500px;">
-        CREATE BLOGS
+        UPDATE BLOGS
 
     </h2>
     <br>
-    <form action="/save" method="post">
+    <form action="/update/<%= data._id %>" method="post">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -14,19 +14,20 @@
                         <!-- Title input -->
                         <div class="mb-4">
                             <label class="form-label" >Title</label>
-                            <input type="text" id="title" class="form-control" name="title"/>
+                            <input type="text" id="title" class="form-control" name="title" value="<%= data.title %>"/>
                         </div>
 
                         <!-- Blog input -->
                         <div class="mb-4">
-                            <label class="form-label" >Blog</label>
-                            <textarea class="form-control" id="blog" rows="4" name="blog"></textarea>
-                        </div>
+                            <label class="form-label">Blog</label>
+                            <textarea class="form-control" id="blog" rows="4" name="blog"><%= data.blog %></textarea>
+                          </div>
+                          
 
                         <!-- Author input -->
                         <div class="mb-4">
                             <label class="form-label" >Author</label>
-                            <input type="text" id="author" class="form-control" , name="author" />
+                            <input type="text" id="author" class="form-control"  name="author" value="<%= data.author %>" />
                         </div>
 
 

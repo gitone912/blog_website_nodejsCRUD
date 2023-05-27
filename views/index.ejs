@@ -25,17 +25,16 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active"
-          style="background-image: url('https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg')">
+          style="background-image: url('https://source.unsplash.com/1920x1080/?blogs')">
           <div class="carousel-caption">
-            <h3>Work with US</h3><br><br><br>
-            <p>Gain Experience and knowledge while working with us</p>
+            <h3>Daily Blogs</h3><br><br><br>
+            <p>Gain Experience and knowledge while posting with us and make daily blogs</p>
           </div>
         </div>
         <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
           <div class="carousel-caption">
             <h3>Flexibility</h3><br><br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem voluptate maiores est quidem magni
-              nulla la</p>
+            <p>immense features for uploading your ddaily blogs and update and delete </p>
           </div>
         </div>
         <div class="carousel-item" style="background-image: url('https://source.unsplash.com/lHGeqh3XhRY/1920x1080')">
@@ -68,38 +67,34 @@
     <br>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-          <% var i=1 %>
-          <% data.forEach((item)=> { %>
+        <% var i=1 %>
+        <% data.forEach((item)=> { %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4"> <!-- Changed class from col-12 col-sm-8 col-md-6 col-lg-4 to col-12 col-sm-6 col-md-4 col-lg-4 -->
+          <div class="card mb-4">
+            <img class="card-img-top"
             
-          <div class="card">
-            <img class="card-img"
-              src="https://source.unsplash.com/?<%= item.title  %>"
-              alt="Bologna">
-            <div class="card-img-overlay">
-              <a href="#" class="btn btn-light btn-sm"><%= item.title %> </a>
-            </div>
+              src="https://source.unsplash.com/1920x1080/?<%= item.blog%>" 
+        >
             <div class="card-body">
               <h4 class="card-title"><%= item.title %></h4>
               <small class="text-muted cat">
                 <i class="far fa-clock text-info"></i> 30 minutes
-                <i class="fas fa-users text-info"></i> 4 portions
+                <i class="fas fa-users text-info"></i> <%= i++ %>
+                
               </small>
-              <p class="card-text"><%= item.blog%></p>
-              <a href="#" class="btn btn-info">Read</a>
+              <p class="card-text"><%= item.blog %></p>
+              <a href="/blog/<%= item._id %>" class="btn btn-info">Read</a>
             </div>
             <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
-              <div class="views"><%= item.date_published %>
-              </div>
+              <div class="views"><%= item.date_published %></div>
               <div class="stats">
                 <i class="far fa-eye"></i> 1347
-                <i class="far fa-comment"></i> 12
+                <i class="far fa-comment"></i><%= item.author %>
               </div>
-
             </div>
           </div>
-          <% }); %>
         </div>
+        <% }); %>
       </div>
     </div>
   </body>

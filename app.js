@@ -9,7 +9,7 @@ const app = express();
 const port = 8000;
 const DATABASE_URL = "mongodb://localhost:27017";
 
-
+app.use(express.urlencoded({ extended: false}));
 
 connectDb(DATABASE_URL);
 

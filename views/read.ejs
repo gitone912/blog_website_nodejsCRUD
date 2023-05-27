@@ -1,0 +1,33 @@
+
+
+  <%- include('./partials/header') -%>
+<hr>
+<br>
+  <main class="container">
+    <header class="header">
+     
+      <h1 class="heading"><%= data.title %> </h1>
+    </header>
+    <hr>
+    <br>
+    <section class="content border-top-3">
+      <img src="https://source.unsplash.com/1920x1080/?<%= data.blog%>" alt="large-image" class="img-fluid poster-image">
+      <hr>
+    <br>
+      <h3><%= data.blog %> </h3>
+     
+    </section>
+    <hr>
+    <br>
+    <section class="content border-top-3">
+      <a href="" target="_blank" class="name-link"><%= data.author %> </a>
+      <p><%= data.date_published %> </p>
+    </section>
+    <a href="/edit/<%= data._id %>" class="btn btn-info">update</a>
+    <a href="/delete/<%= data._id %>" class="btn btn-info">delete</a>
+  </main>
+  
+
+  <%- include('./partials/footer') -%>
+
+ 
