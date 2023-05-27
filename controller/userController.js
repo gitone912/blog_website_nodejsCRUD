@@ -1,12 +1,17 @@
 import Blog from "../models/blogData.js"
 
 class BlogController {
-    static renderHome = (req, res) => {
-        res.render("index",)
+    static renderHome = async (req, res) => {
+        try {
+            const result = await Blog.find()
+            res.render('index',{data:result})
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     static createBlog = (req , res) => {
-        res.render("createBlog")
+        res.render("edit")
     }
     static renderBlog = (req , res) => {
         res.render("blog")

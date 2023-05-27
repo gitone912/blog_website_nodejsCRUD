@@ -6,7 +6,7 @@ const blogSchema = mongoose.Schema({
     date_published : {type: Date, default: Date.now},
     date_edited : {type: Date, default: Date.now},
     author : {type: String},
-    image : {type: String},
+
 
 })
 const Blog = mongoose.model("Blog", blogSchema)
